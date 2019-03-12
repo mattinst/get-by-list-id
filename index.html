@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Firebase List Example</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 border-right">
+          <h1>Item Add</h1>
+          <form id="item-add-form">
+            <label for="item-name">Item Name</label>
+            <input id="item-name" name="item-name" type="text" />
+            <input id="add-item-btn" type="submit" value="Add item" />
+          </form>
+          <h2 class="mt-5">Items:</h2>
+          <div id="item-table-container">
+            <table id="item-table" class="table">
+              <thead>
+                <th>Key / ID</th>
+                <th>Name</th>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <h1>Item Search</h1>
+          <form id="item-search-form">
+            <label for="item-id">Key/ID of item</label>
+            <input id="item-id" name="item-id" type="text" />
+            <input id="find-item-btn" type="submit" value="Find item" />
+          </form>
+          <div id="search-item-result" class="mt-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
